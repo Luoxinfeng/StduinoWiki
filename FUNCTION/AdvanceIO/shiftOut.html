@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>shiftOut() &mdash; Astilbe  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="运算部分" href="../../Computation/chart2.html" />
+    <link rel="prev" title="shiftIn()" href="shiftIn.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Astilbe
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../chart1.html">函数部分</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../digitalIO/digitalIndex.html">数字I/O函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analogIO/analogIndex.html">模拟I/O函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comPro/comProIndex.html">通讯函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time/timeIndex.html">时间函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitOperation/bitOperationIndex.html">位操作函数</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="advanceIndex.html">拓展(Advance) I/O 函数</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="noTone.html">noTone()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tone.html">tone()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shiftIn.html">shiftIn()</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">shiftOut()</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">描述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">参数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">返回</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">例程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">注意</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Computation/chart2.html">运算部分</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chart3.html">变量部分</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chart4.html">待补充</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workDiary.html">修改记录</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Astilbe</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../chart1.html">函数部分</a> &raquo;</li>
+        
+          <li><a href="advanceIndex.html">拓展(Advance) I/O 函数</a> &raquo;</li>
+        
+      <li>shiftOut()</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/FUNCTION/AdvanceIO/shiftOut.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shiftout">
+<h1>shiftOut()<a class="headerlink" href="#shiftout" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>描述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>将一个字节的数据通过移位输出方式逐位输出。数据可以从最高位（最左位）或从最低位（最右位）输出。在输出数据时，当一位数据写入数据输出引脚时，时钟引脚将输出脉冲信号，指示该位数据已被写入数据输出引脚等待读取。</p>
+<p>Stduino开发板的普通IO引脚是有限的，必要时要对IO口进行拓展，才能满足外部设备对IO口的需求。如利用74HC595芯片来拓展Stduino的IO口，来设计流水灯。</p>
+</div>
+<div class="section" id="id2">
+<h2>语法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>shiftOut(dataPin,clockPin,bitOrder,val)</p>
+</div>
+<div class="section" id="id3">
+<h2>参数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>dataPin：输出数据的引脚，引脚需配置成输出模式。
+clockPin：时钟引脚。
+bitOrder：移位顺序。有高位先出（MSBFIRST）和低位优先（LSBFIRST）两种方式。
+val：所要输出的数据值，该数据值将以byte形式输出。</p>
+</div>
+<div class="section" id="id4">
+<h2>返回<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>无</p>
+</div>
+<div class="section" id="id5">
+<h2>例程<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>Stduino外接74HC595芯片，用3个IO口控制8路LED灯。</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">latchPin</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span><span class="c1">//锁存引脚</span>
+<span class="kt">int</span> <span class="n">clockPin</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="c1">//时钟引脚</span>
+<span class="kt">int</span> <span class="n">dataPin</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span> <span class="c1">//数据引脚</span>
+
+<span class="kt">void</span> <span class="nf">setup</span> <span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">D10</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span><span class="c1">//锁存引脚</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">D9</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span><span class="c1">//时钟引脚</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="n">D8</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span> <span class="c1">//数据引脚</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">data</span> <span class="o">&lt;</span> <span class="mi">255</span><span class="p">;</span> <span class="n">data</span><span class="o">++</span><span class="p">)</span>
+  <span class="p">{</span>
+        <span class="n">digitalWrite</span><span class="p">(</span><span class="n">D10</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span> <span class="c1">//将ST_CP口上加低电平让芯片准备好接收数据</span>
+        <span class="n">shiftOut</span><span class="p">(</span><span class="n">D8</span><span class="p">,</span> <span class="n">D9</span><span class="p">,</span> <span class="n">LSBFIRST</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">digitalWrite</span><span class="p">(</span><span class="n">D10</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span> <span class="c1">//将ST_CP这个针脚恢复到高电平</span>
+        <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">//延迟1秒钟观看显示</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>注意<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>使用shiftOut()函数前，数据引脚（dataPin）和时钟引脚（clockPin）必须先通过pinMode()指令设置为输出（OUTPUT）模式。</p></li>
+<li><p>如果读取数据的设备是在Stduino的时钟引脚脉冲信号上升沿读取Stduino的输出数据，请确保在调用shiftOut()输出数据前，应先通过digitalWrite(clockPin, LOW)语句，将时钟引脚设置为LOW，以确保数据读取准确无误。</p></li>
+<li><p>shiftOut一次只能输出1字节（8位）数据。如果需要输出大于255的数值，需要通过两次使用shiftOut()输出数据。</p></li>
+</ul>
+</div></blockquote>
+<p>如下程序所示：</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// 高位字节先出模式</span>
+<span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span> <span class="c1">//待输出数据</span>
+<span class="n">shiftOut</span><span class="p">(</span><span class="n">dataPin</span><span class="p">,</span> <span class="n">clock</span><span class="p">,</span> <span class="n">MSBFIRST</span><span class="p">,</span> <span class="p">(</span><span class="n">data</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">));</span> <span class="c1">// 输出高位字节</span>
+<span class="n">shiftOut</span><span class="p">(</span><span class="n">dataPin</span><span class="p">,</span> <span class="n">clock</span><span class="p">,</span> <span class="n">MSBFIRST</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span> <span class="c1">// 输出低位字节</span>
+
+<span class="c1">// 低位字节先出模式</span>
+<span class="n">data</span> <span class="o">=</span> <span class="mi">500</span><span class="p">;</span> <span class="c1">//待输出数据</span>
+<span class="n">shiftOut</span><span class="p">(</span><span class="n">dataPin</span><span class="p">,</span> <span class="n">clock</span><span class="p">,</span> <span class="n">LSBFIRST</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span> <span class="c1">// 输出低位字节</span>
+<span class="n">shiftOut</span><span class="p">(</span><span class="n">dataPin</span><span class="p">,</span> <span class="n">clock</span><span class="p">,</span> <span class="n">LSBFIRST</span><span class="p">,</span> <span class="p">(</span><span class="n">data</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">));</span> <span class="c1">// 输出高位字节</span>
+</pre></div>
+</div>
+<p>访问<a class="reference external" href="http://stduino.com/forum.php">Stduino官网</a> ，了解更多Stduino动态</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Computation/chart2.html" class="btn btn-neutral float-right" title="运算部分" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="shiftIn.html" class="btn btn-neutral float-left" title="shiftIn()" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AstilStudio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

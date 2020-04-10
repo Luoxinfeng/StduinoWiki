@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>highByte() &mdash; Astilbe  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="lowByte()" href="lowByte.html" />
+    <link rel="prev" title="bitWrite()" href="bitWrite.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Astilbe
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../chart1.html">函数部分</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../digitalIO/digitalIndex.html">数字I/O函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analogIO/analogIndex.html">模拟I/O函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comPro/comProIndex.html">通讯函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time/timeIndex.html">时间函数</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="bitOperationIndex.html">位操作函数</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bit.html">bit()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitRead.html">bitRead()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitSet.html">bitSet()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitClear.html">bitClear()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitWrite.html">bitWrite()</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">highByte()</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">描述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">参数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">返回</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">例程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">注意</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="lowByte.html">lowByte()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../AdvanceIO/advanceIndex.html">拓展(Advance) I/O 函数</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Computation/chart2.html">运算部分</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chart3.html">变量部分</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chart4.html">待补充</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workDiary.html">修改记录</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Astilbe</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../chart1.html">函数部分</a> &raquo;</li>
+        
+          <li><a href="bitOperationIndex.html">位操作函数</a> &raquo;</li>
+        
+      <li>highByte()</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/FUNCTION/bitOperation/highByte.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="highbyte">
+<h1>highByte()<a class="headerlink" href="#highbyte" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>描述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>返回变量高字节。如果该变量有两个以上的字节，则取第二低字节（如有四个字节时，返回的是从右数第二个字节）</p>
+<p>一般一个16位（双字节）的数据，比如FF1E（16进制）。那么高位字节就是FF，低位是1E，highByte()返回FF。</p>
+<p>如果是32位（四字节）的数据，比如3E68 C16A（16进制）。高位字（不是字节）是3E68，低位字是C16A，但是利用highByte()返回的是C1（第二低字节）。</p>
+</div>
+<div class="section" id="id2">
+<h2>语法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>highByte(x)</p>
+</div>
+<div class="section" id="id3">
+<h2>参数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>x：被取高字节的变量（可以是任何变量类型）</p>
+</div>
+<div class="section" id="id4">
+<h2>返回<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>字节（byte）</p>
+</div>
+<div class="section" id="id5">
+<h2>例程<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>利用highByte()返回整数300的高位字节</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">intValue</span> <span class="o">=</span> <span class="mi">300</span><span class="p">;</span> <span class="c1">// 300 的16进制为0x12C</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">byte</span> <span class="n">hiByte</span><span class="p">;</span>
+  <span class="n">hiByte</span> <span class="o">=</span> <span class="n">highByte</span><span class="p">(</span><span class="n">intValue</span><span class="p">);</span> <span class="c1">//取出 intValue 的高位</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">intValue</span><span class="p">,</span><span class="n">DEC</span><span class="p">);</span><span class="c1">//打引输出变量的十进制数值</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">intValue</span><span class="p">,</span><span class="n">HEX</span><span class="p">);</span><span class="c1">//打印输出变量的十六进制数值</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">hiByte</span><span class="p">,</span><span class="n">DEC</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">10000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>注意<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>无</p>
+<p>访问<a class="reference external" href="http://stduino.com/forum.php">Stduino官网</a> ，了解更多Stduino动态</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lowByte.html" class="btn btn-neutral float-right" title="lowByte()" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bitWrite.html" class="btn btn-neutral float-left" title="bitWrite()" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AstilStudio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+hello
+=====
+hello,world
+=============
+.. toctree::
+	:maxdepth: 2
+	:numbered:
+    example

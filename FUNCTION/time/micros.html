@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>micros() &mdash; Astilbe  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="位操作函数" href="../bitOperation/bitOperationIndex.html" />
+    <link rel="prev" title="delayMicrosecond()" href="delayMicrosecond.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Astilbe
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../chart1.html">函数部分</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../digitalIO/digitalIndex.html">数字I/O函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analogIO/analogIndex.html">模拟I/O函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comPro/comProIndex.html">通讯函数</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="timeIndex.html">时间函数</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="delay.html">delay()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="millis.html">millis()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delayMicrosecond.html">delayMicrosecond()</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">micros()</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">描述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">参数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">返回</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">例程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">注意</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bitOperation/bitOperationIndex.html">位操作函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AdvanceIO/advanceIndex.html">拓展(Advance) I/O 函数</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Computation/chart2.html">运算部分</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chart3.html">变量部分</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chart4.html">待补充</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workDiary.html">修改记录</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Astilbe</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../chart1.html">函数部分</a> &raquo;</li>
+        
+          <li><a href="timeIndex.html">时间函数</a> &raquo;</li>
+        
+      <li>micros()</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/FUNCTION/time/micros.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="micros">
+<h1>micros()<a class="headerlink" href="#micros" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>描述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>返回Stduino从运行当前程序开始的微秒数。这个数字将在约71分钟后溢出。</p>
+</div>
+<div class="section" id="id2">
+<h2>语法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>micros()</p>
+</div>
+<div class="section" id="id3">
+<h2>参数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>无</p>
+</div>
+<div class="section" id="id4">
+<h2>返回<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>返回从运行当前程序开始的微秒数（无符号整型unsigned int）。</p>
+</div>
+<div class="section" id="id5">
+<h2>例程<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">time</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+<span class="p">{</span>
+ <span class="n">Serial1</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+<span class="p">{</span>
+ <span class="c1">//Serial.print(&quot;Time:&quot;);</span>
+ <span class="n">time</span> <span class="o">=</span> <span class="n">micros</span><span class="p">();</span>
+ <span class="c1">//打印从程序开始的时间</span>
+ <span class="n">Serial1</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">time</span><span class="p">);</span>
+ <span class="c1">//等待一秒钟</span>
+ <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>注意<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>1毫秒=1000微秒,1秒=1000毫秒。</p>
+<p>访问<a class="reference external" href="http://stduino.com/forum.php">Stduino官网</a> ，了解更多Stduino动态</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../bitOperation/bitOperationIndex.html" class="btn btn-neutral float-right" title="位操作函数" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="delayMicrosecond.html" class="btn btn-neutral float-left" title="delayMicrosecond()" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AstilStudio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

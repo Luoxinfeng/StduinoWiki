@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>digitalRead() &mdash; Astilbe  文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="digitalWrite()" href="digitalWrite.html" />
+    <link rel="prev" title="pinMode()" href="pinMode.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Astilbe
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../chart1.html">函数部分</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="digitalIndex.html">数字I/O函数</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pinMode.html">pinMode()</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">digitalRead()</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">描述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">参数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">返回</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">例程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">注意</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="digitalWrite.html">digitalWrite()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../analogIO/analogIndex.html">模拟I/O函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../comPro/comProIndex.html">通讯函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time/timeIndex.html">时间函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bitOperation/bitOperationIndex.html">位操作函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../AdvanceIO/advanceIndex.html">拓展(Advance) I/O 函数</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Computation/chart2.html">运算部分</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chart3.html">变量部分</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chart4.html">待补充</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../workDiary.html">修改记录</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Astilbe</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../chart1.html">函数部分</a> &raquo;</li>
+        
+          <li><a href="digitalIndex.html">数字I/O函数</a> &raquo;</li>
+        
+      <li>digitalRead()</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/FUNCTION/digitalIO/digitalRead.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="digitalread">
+<h1>digitalRead()<a class="headerlink" href="#digitalread" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>描述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>读取指定引脚的值，获取数字信号。</p>
+</div>
+<div class="section" id="id2">
+<h2>语法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>digitalRead(pin)</p>
+</div>
+<div class="section" id="id3">
+<h2>参数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>pin:需要读取数字信号的引脚号</p>
+</div>
+<div class="section" id="id4">
+<h2>返回<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>0或1</dt><dd><ul class="simple">
+<li><p>0：低电平</p></li>
+<li><p>1：高电平</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h2>例程<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>该例程展示一个输入引脚控制输出引脚的状态</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">const</span> <span class="kt">int</span> <span class="n">ButtonPin</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span><span class="c1">//定义按键引脚号为常量，即D8引脚</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">LedPin</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span><span class="c1">//定义灯引脚号为常量，即D13引脚</span>
+<span class="kt">int</span> <span class="n">ButtonState</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">//定义按键状态为变量，初始值为0，即低电平</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+<span class="p">{</span>
+ <span class="n">pinMode</span><span class="p">(</span><span class="n">ButtonPin</span><span class="p">,</span><span class="n">INPUT</span><span class="p">);</span><span class="c1">//设置D8引脚为浮空输入模式</span>
+ <span class="n">pinMode</span><span class="p">(</span><span class="n">LedPin</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="c1">//设置D13引脚为推挽输出模式</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">ButtonState</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">ButtonPin</span><span class="p">);</span><span class="c1">//读取按键引脚，并赋值给按键状态</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">ButtonState</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)</span><span class="c1">//若是按键状态为高电平</span>
+  <span class="p">{</span>
+        <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LedPin</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span><span class="c1">//灯引脚输出状态更改为高电平</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+        <span class="n">digitalWrite</span><span class="p">(</span><span class="n">LedPin</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span><span class="c1">//灯引脚输出状态更改为低电平</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>注意<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>如果引脚输入模式设为INPUT（浮空输入），该引脚若未接入（例如导线断连等），引脚输入易受干扰，返回值不确定（可能为高，可能为低）。</p>
+<p>为保证输入更稳定，可设置输入模式为上拉电阻输入或者下拉电阻输入。详细信息可参考pinMode()中描述的各种输入模式。</p>
+<p>模拟引脚(A类口)均能作数字引脚(D类口)使用，例如A0，A1等。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="digitalWrite.html" class="btn btn-neutral float-right" title="digitalWrite()" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pinMode.html" class="btn btn-neutral float-left" title="pinMode()" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, AstilStudio
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
